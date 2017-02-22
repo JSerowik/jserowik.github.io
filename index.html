@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<title>Justin Serowik</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("images/blue_sl.jpg");
+    min-height: 400px;
+    opacity:0.92 !important;
+    filter:alpha(opacity=92) !important;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("images/a_nyc.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+
+<body>
+
+<!-- Sidenav with image -->
+<nav class="w3-sidenav w3-hide-medium w3-hide-small" style="width:30%; overflow: hidden;">
+  <div class="bgimg nav-filter"></div>
+  <div class="bgimg-s1 nav-filter" id="logo-sc1"></div>
+  <div class="bgimg-s2 nav-filter" id="logo-sc2"></div>
+</nav>
+
+<!-- Hidden Sidenav (reveals when clicked on menu icon)-->
+<nav class="w3-sidenav nav_side w3-animate-right w3-center w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidenav">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-closenav w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-hover-black" onclick="closeNav()">Home</a>
+  <a href="#portfolio" class="w3-hover-black" onclick="closeNav()">Portfolio</a>
+  <a href="#about" class="w3-hover-black" onclick="closeNav()">About</a>
+  <a href="#contact" class="w3-hover-black" onclick="closeNav()">Contact</a>
+</nav>
+
+<div class="w3-main" style="margin-left:30%">
+
+  <span class="w3-opennav w3-top w3-padding-top w3-xxlarge w3-margin-right main-out w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+
+  <header class="w3-container top-main w3-center" id="home">
+    <div class="bgimg-1 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <h1 class="w3-jumbo main-out"><b>Justin Serowik</b></h1>
+        <!--<p class="main-out" style="font-size: 28px; ">Engineering Computers for Tomorrow</p>-->
+      </div>
+    </div>
+  </header>
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio" style="padding: 32px;">
+
+    <h2 class="w3-text-grey">Projects</h2>
+    <hr class="w3-opacity">
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+    <!--onclick="document.getElementById('nns').style.display='block'"-->
+        <a style="background: url('images/test.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('nns').style.display='block'">
+          <div class="main-out">
+            <h2>Neural Network Security</h2>
+            <p>Securing your phone data</p>
+          </div>
+        </a>
+        <a style="background: url('images/newspaper.jpg');" class="projects w3-hover-light-grey" onclick="document.getElementById('textmin').style.display='block'">
+          <div class="main-out">
+            <h2>Sentiment Analysis and the News</h2>
+            <p>Making sense of the news</p>
+          </div>
+        </a>
+        <a style="background: url('images/gpu_ca.jpg');  background-position: 0% 20%;" class="projects w3-hover-light-grey" onclick="document.getElementById('secdb').style.display='block'">
+          <div class="main-out">
+            <h2>Soteria</h2>
+            <p>The world's most secure database</p>
+          </div>  
+        </a>
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+<!-- Neural Network Security -->
+    <div id="nns" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom info_b"kk>
+        <div class="w3-container info_h">
+          <span onclick="document.getElementById('nns').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+          <h1>Neural Network Security</h1>
+        </div>
+        <div class="w3-container info_t">
+          <h5 style="margin-top:0px;">Leveraging Neural Networks to detect man-in-the-middle attacks on cell phone connections</h5>
+          <p> Senior Design project through Stevens Institute of Technology whose goal is to create a revolutionary system that will monitor and detect suspicious network activity, such as network spoofing and man-in-the-middle attacks using advanced machine learning algorithms. Our system will be able to monitor GSM packets in order to provide comprehensive user protection. Users can access data from our machine learning algorithms using our front end portal.</p>
+          <p><b>Status:</b> Thius project is in its infacy and currently recieving advice from Stevens professors and industry experts.</p>
+          <a href="http://personal.stevens.edu/~jserowik/nns" target="_blank">Follow this project</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Text Mining -->
+    <div id="textmin" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom info_b">
+        <div class="w3-container  info_h">
+          <span onclick="document.getElementById('textmin').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+          <h1>Sentiment Analysis</h1>
+        </div>
+        <div class="w3-container  info_t">
+          <h5 style="margin-top:0px;">Using python to extract data and analyze sentiment from news articles</h5>
+          <p>Independent project advised by a Stevens Professor. Leveraging the variety of text processing and neural network libraries available in Python, I scrape trustworthy news feeds and extract pure text from the pages. The text is then processed using Natural Language processing to determine a positive or negative sentiment. This information is then stored into a data set that can be processed by a neural network to correlate the sentiment with other available data sets, such as stocks.</p>
+          <p><b>Status:</b> Automated text extraction and sentiment analysis are complete and fully functional. Currently, I'm trying to find an effective way to store data so it can be digested by a neural network.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soteria -->
+    <div id="secdb" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom info_b">
+        <div class="w3-container info_h">
+          <span onclick="document.getElementById('secdb').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+          <h1>Soteria</h1>
+        </div>
+        <div class="w3-container info_t">
+          <h5 style="margin-top:0px;">The Most Secure Database In The World</h5>
+          <p>Project devoted to building the most secure database in the world. The project uses bleeding edge technologies, such as blockchain, to provide database security and verify integrity. Through a combination of secure technologies and protocols we aim to protect users' data while allowing them to share with specified outside parties who can securely edit the data.</p>
+          <p><b>Disclaimer:</b> Soteria is a working title and in no way a corporate trademark.</p>
+          <p><b>Status:</b> This project is in its infancy and currently receiving advice from Stevens professors and industry experts.</p>
+          <a href="http://personal.stevens.edu/~jserowik/Soteria/" target="_blank">Follow this project</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="about">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">ABOUT ME</span>
+  </div>
+</div>
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-32" style="padding: 32px;">
+    <hr class="w3-opacity">
+    <p>I am a senior Electrical Engineering student at Stevens Institute of Technology interested in Artificial intelligence, Advanced Computation, and Cybersecurity. I have been interested in and worked with computers since the age of 7. From taking them apart to building my own, I have devoted a lot of my time to understanding how they work.</p>
+    <p>I interned at the premiere web design firm Finalsite, before finding that my passions laid in Artificial Intelligence. I have experience working in User Support roles and as a Web Designer, and am currently working on campus as a Hardware and Software Technician along with my studies.</p>
+    <p>I was also involved in research concerning Convolution Neural Networks and Natural Language Processing. My study focuses are on advanced computational methods and their applications to Artificial Intelligence such as Convolution Neural Networks. My interests also include the study of Cybersecurity and its applicability on advanced computational systems.</p>
+    <p>Currently, I am the President of the Stevens Branch of IEEE and was formally the Philanthropy Chair and Alumni Chair at the Lodge (Chi Psi) Fraternity. I love motivating others to reach their potential. I am active in the Lodge Fraternity on campus where I participate philanthropic endeavors and our alumni network.</p>
+    <p>I am very adaptable, self-motivated learner who is interested in the bleeding edge of science and technology.
+    I am expecting to finish my Bachelor's Degree in May of 2017 and working to finishing a Master's of Science in Computer Engineering at Stevens by May 2018.</p>
+    <h3 class="w3-padding-16">Skills</h3>
+    <p class="w3-wide">Programming</p>
+    <div class="trait_wrap">
+        <div class="traits w3-col s2">Java</div>
+        <div class="traits w3-col s2">C++</div>
+        <div class="traits w3-col s2">Python</div>
+        <div class="traits w3-col s2">HTML</div>
+        <div class="traits w3-col s2">CSS</div>
+        <div class="traits w3-col s2">JavaScript</div>
+        <div class="traits w3-col s2">jQuery</div>
+        <div class="traits w3-col s2">Verilog</div>
+        <div class="traits w3-col s2">Basic</div>
+        <div class="traits w3-col s2">Matlab</div>
+    </div>
+    <p class="w3-wide">Operating Systems</p>
+    <div class="trait_wrap">
+        <div class="traits w3-col s2">Windows 7</div>
+        <div class="traits w3-col s2">Windows 8.1</div>
+        <div class="traits w3-col s2">Windows 10</div>
+        <div class="traits w3-col s2">OS X Yosemite</div>
+        <div class="traits w3-col s2">Ubuntu</div>
+        <div class="traits w3-col s2 xs">UberStudent</div>
+        <div class="traits w3-col s2">Kali</div>
+        <div class="traits w3-col s2">Arch</div>
+    </div>
+    <p class="w3-wide">Software</p>
+    <div class="trait_wrap">
+        <div class="traits w3-col s2">Git</div>
+        <div class="traits w3-col s2">Matlab</div>
+        <div class="traits w3-col s2">Command Line</div>
+        <div class="traits w3-col s2">Android OS</div>
+        <div class="traits w3-col s2">Sublime Text</div>
+        <div class="traits w3-col s2">GNU nano</div>
+        <div class="traits w3-col s2">Geany</div>
+        <div class="traits w3-col s2">Firebug</div>
+        <div class="traits w3-col s2">Eclipse</div>
+        <div class="traits w3-col s2">BlueJ</div>
+        <div class="traits w3-col s2">Parature</div>
+        <div class="traits w3-col s2 xs">SolidWorks</div>
+        <div class="traits w3-col s2">MS Word</div>
+        <div class="traits w3-col s2">MS Excel</div>
+        <div class="traits w3-col s2 xs">MS PowerPoint</div>
+        <div class="traits w3-col s2 xs ts">Adobe Photoshop 6</div>
+        <div class="traits w3-col s2">Adobe Flash</div>
+        <div class="traits w3-col s2 xs">Dreamweaver</div>
+    </div>
+    <p class="w3-wide">Interests</p>
+    <div class="trait_wrap">
+        <div class="traits w3-col s2 xs ts">Artificial Intelligence</div>
+        <div class="traits w3-col s2 xs ts">Advanced Compution</div>
+        <div class="traits w3-col s2">Quantum Physics</div>
+        <div class="traits w3-col s2">Astronomy</div>
+        <div class="traits w3-col s2 xs ts">Nature Conservation</div>
+        <div class="traits w3-col s2">Tech Policy</div>
+    </div>
+    <p class="w3-wide">Activities</p>
+    <div class="trait_wrap">
+        <div class="traits w3-col s2">IEEE</div>
+        <div class="traits w3-col s2">Music</div>
+        <div class="traits w3-col s2">Hiking</div>
+        <div class="traits w3-col s2">Running</div>
+        <div class="traits w3-col s2">Traveling</div>
+        <div class="traits w3-col s2 xs">Photography</div>
+        <div class="traits w3-col s2">Film</div>
+        <div class="traits w3-col s2 xs ts">The Lodge Fraternity</div>
+    </div>
+    <br>
+    <a class="w3-btn w3-light-grey w3-padding-large w3-section" href="media/JSerowikOnlineResume.pdf" target="_blank">
+      <i class="fa fa-download"></i> Download Resume
+    </a>
+  </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container" id="contact">
+      <div class="w3-display-middle">
+         <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+      </div>
+    </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-32 w3-content w3-text-grey" style="margin-bottom:64px" style="padding: 32px;">
+
+    <div class="w3-section">
+      <p class="w3-large">Please feel free to reach out to me with legitimate offers concerning jobs or about my interests. Solicitations and spam will be ignored.</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Justin.Serowik@protonmail.com</p>
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Hoboken, USA</p>
+    </div>
+    
+     <!-- Google Map -->
+    <div id="googleMap" style="width:100%;height:300px;margin:36px 0;"></div>
+   
+  <!-- End Contact Section -->
+  </div>  
+  
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin:-24px">
+    <!--<i class="fa fa-facebook-official w3-hover-text-indigo"></i>-->
+    <!--<i class="fa fa-instagram w3-hover-text-purple"></i>-->
+    <a href="https://www.linkedin.com/in/jserowik" target="_blank"><i class="fa fa-linkedin w3-hover-text-indigo"></i></a>
+    <p class="w3-medium">Designed by Justin Serowik and Powered by <a href="http://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <!-- End footer -->
+  </footer>
+  
+<!-- END PAGE CONTENT -->
+</div>
+
+<!-- Add Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+var myCenter = new google.maps.LatLng(40.746785, -74.025686);
+
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// Open and close sidenav
+function openNav() {
+    document.getElementById("mySidenav").style.width = "70%";
+    document.getElementById("mySidenav").style.display = "block";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+var modal1 = document.getElementById('nns');
+var modal2 = document.getElementById('secdb');
+var modal3 = document.getElementById('textmin');
+window.onclick = function(event) {
+  if (event.target == modal1) {
+    modal1.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+};
+var win = window, body = document.body, html = document.documentElement;
+var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+
+var pos = document.documentElement.scrollTop;
+var logo1 = document.getElementById('logo-sc1');
+var logo2 = document.getElementById('logo-sc2');
+function scrollPic() {
+  if((pos/height) > 0.3){
+    logo1.style.top = '0%';
+  }
+  else{
+    logo1.style.top = '100%';
+  }
+  if((pos/height) > 0.6){
+    logo2.style.top = '0%';
+  }
+  else{
+    logo2.style.top = '100%';
+  }
+};
+scrollPic();
+win.onscroll = function(){
+  pos = document.documentElement.scrollTop;
+  scrollPic();
+};
+</script>
+</body>
+</html>
