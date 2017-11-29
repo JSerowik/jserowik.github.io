@@ -47,7 +47,7 @@ img{margin-bottom:-5px}a{color:inherit}
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/tio_port3.jpg');
+    background-image: url('../images/santa_monica.jpg');
     min-height: 100%;
     min-width:100%;
     position: absolute;
@@ -56,7 +56,7 @@ img{margin-bottom:-5px}a{color:inherit}
 	position: absolute;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('../images/j_gwb2.jpg');
+    background-image: url('../images/tio_port3.jpg');
     min-height: 100%;
     min-width:100%;
     transition: top 0.75s ease;
@@ -75,14 +75,14 @@ img{margin-bottom:-5px}a{color:inherit}
     top: 100%;
 }
 .bgimg-1 {
-    background-image: url('../images/stevens_v.jpg');
+    background-image: url('../images/nyc_ferry.jpg');
     min-height: 400px;
-    background-position: 0% 350%; 
+    background-position: 0% 100%; 
     opacity:0.88 !important;
     filter:alpha(opacity=88) !important;
     -webkit-backface-visibility:hidden;
 }
-
+#git:hover{color:#000; transition: color 0.75s linear;-webkit-transition: color 0.75s linear;}
 
 
 .info_h{background: rgba(0,0,0,0.7); color:#ffffff !important;}
