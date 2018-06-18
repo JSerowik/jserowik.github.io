@@ -12,10 +12,16 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
+    overflow: hidden;
+    /*clip-path: polygon(
+    0 0,
+    100% calc(0% + 10vw),
+    100% 100%,
+    0 calc(100% - 10vw)
+  );*/
 }
 
 /* First image (Logo. Full height) */
@@ -23,15 +29,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Second image (Portfolio) */
 .bgimg-2 {
     background-image: url("images/nyc_blue.jpg");
-    min-height: 400px;
+    min-height: 450px;
     opacity:0.92 !important;
     filter:alpha(opacity=92) !important;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("images/anyc.JPG");
-    min-height: 400px;
 }
 
 .w3-wide {letter-spacing: 10px;}
@@ -47,13 +47,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 <body>
 
-<!-- Sidenav with image -->
+<!-- Sidenav with image 
 <nav class="w3-sidenav w3-hide-medium w3-hide-small" style="width:30%; overflow: hidden;">
   <div class="bgimg nav-filter"></div>
   <div class="bgimg-s1 nav-filter" id="logo-sc1"></div>
   <div class="bgimg-s2 nav-filter" id="logo-sc2"></div>
 </nav>
-
+-->
 <!-- Hidden Sidenav (reveals when clicked on menu icon)-->
 <nav class="w3-sidenav nav_side w3-animate-right w3-center w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidenav">
   <a href="javascript:void(0)" onclick="closeNav()" class="w3-closenav w3-xxxlarge w3-display-topright" style="padding:0 12px;">
@@ -65,43 +65,29 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <a href="#contact" class="w3-hover-black" onclick="closeNav()">Contact</a>
 </nav>
 
-<div class="w3-main" style="margin-left:30%">
+<div class="w3-main" style="">
 
   <span class="w3-opennav w3-top w3-padding-top w3-xxlarge w3-margin-right main-out w3-hover-text-black" style="width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
 
   <header class="w3-container top-main w3-center" id="home">
-    <div class="bgimg-1 w3-display-container w3-opacity-min">
+    <div class="bgimg-t w3-display-container w3-opacity-min">
       <div class="w3-display-middle">
-        <h1 class="w3-jumbo main-out"><b>Justin Serowik</b></h1>
+        <!--<h1 class="w3-jumbo main-out"><b>Justin Serowik</b></h1>-->
         <!--<p class="main-out" style="font-size: 28px; ">Engineering Computers for Tomorrow</p>-->
       </div>
     </div>
   </header>
-
-  <!-- Portfolio Section -->
-  <div class="w3-padding-32 w3-content" id="portfolio" style="padding: 32px;">
-
-    <h2 class="w3-text-grey">Projects</h2>
-    <hr class="w3-opacity">
-
-    <div class="w3-row-padding" style="margin:0 -16px">
-    <!--onclick="document.getElementById('nns').style.display='block'"-->
-        <a style="background: url('images/test.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('nns').style.display='block'">
-          <div class="main-out">
-            <h2>Neural Network Security</h2>
-            <p>Securing your phone data</p>
-          </div>
-        </a>
-        <a style="background: url('images/newspaper.jpg');" class="projects w3-hover-light-grey" onclick="document.getElementById('textmin').style.display='block'">
-          <div class="main-out">
-            <h2>Sentiment Analysis and the News</h2>
-            <p>Making sense of the news</p>
-          </div>
-        </a>
-    </div>
-  <!-- End Portfolio Section -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="about">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">WHO I AM</span>
   </div>
-
+</div>
+<div class="w3-content w3-justify w3-text-grey w3-padding-32" style="padding: 32px;">
+    <p>I am a Graduate student at Stevens Institute of Technology pursuing a Master's of Science in Computer Engineering with Graduate certificates in Deep Learning and Cybersecurity. In May of 2017, I completed my Bachelor's of Engineering in Electrical Engineering at Stevens. My graduate focuses are on practical applications and optimization of Deep Learning algorithms. My interests also include the study of Cybersecurity and its application on Machine Learning systems. </p>
+    <p>At Stevens I was the President of the Stevens Branch of IEEE, the formal Philanthropy Chair, and the current Alumni Chair of the Lodge (Chi Psi) Fraternity. I have been involved in research concerning Convolution Neural Networks and Natural Language Processing, focused on extracting text and sentiment analysis on news sources. My Senior Design (Capstone) project involved using Neural Networks to detect cell tower spoofing and Man-In-The-Middle attacks using only signal attributes from a user's phone. Currently, I am working on multiple small independent projects implementing Deep Learning.</p>
+    <p>My work experience includes interning at the premier web design firm Finalsite, where I worked in User Support roles and as a Web Designer. My job had me managing and programming for multiple clients at once with diverse projects ranging from app design to custom web templates. Currently I am working on campus as a Hardware and Software Technician as I finish my graduate degree.</p>
+    <p>From an early age I've been interested in computers and bleeding edge tech. I'm constantly working on and looking for new technologies to improve people's lives. I am a very adaptable, self-motivated learner who wants to use my skill set to help people. I am expecting to finish my Master's of Science in Computer Engineering at Stevens by December 2018.</p>
+</div>
 <!-- Neural Network Security -->
     <div id="nns" class="w3-modal">
       <div class="w3-modal-content w3-animate-zoom info_b"kk>
@@ -136,17 +122,41 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min" id="about">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-light-grey w3-wide">ABOUT ME</span>
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">PORTFOLIO</span>
   </div>
 </div>
 
-  <!-- About Section -->
+
+  <!-- Portfolio Section -->
+  <div class="w3-padding-32 w3-content" id="portfolio" style="padding: 32px;">
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+    <!--onclick="document.getElementById('nns').style.display='block'"-->
+        <a style="background: url('images/test.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('nns').style.display='block'">
+          <div class="main-out">
+            <h2>Neural Network Security</h2>
+            <p>Securing your phone data</p>
+          </div>
+        </a>
+        <a style="background: url('images/newspaper.jpg');" class="projects w3-hover-light-grey" onclick="document.getElementById('textmin').style.display='block'">
+          <div class="main-out">
+            <h2>Sentiment Analysis and the News</h2>
+            <p>Making sense of the news</p>
+          </div>
+        </a>
+    </div>
+  <!-- End Portfolio Section -->
+  </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container" id="contact">
+      <div class="w3-display-middle">
+         <span class="w3-xxlarge w3-text-light-grey w3-wide">SKILLSET</span>
+      </div>
+    </div>
+
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" style="padding: 32px;">
-    <hr class="w3-opacity">
-    <p>I am a Graduate student at Stevens Institute of Technology pursuing a Master's of Science in Computer Engineering with Graduate certificates in Deep Learning and Cybersecurity. In May of 2017, I completed my Bachelor's of Engineering in Electrical Engineering at Stevens. My graduate focuses are on practical applications and optimization of Deep Learning algorithms. My interests also include the study of Cybersecurity and its application on Machine Learning systems. </p>
-    <p>At Stevens I was the President of the Stevens Branch of IEEE, the formal Philanthropy Chair, and the current Alumni Chair of the Lodge (Chi Psi) Fraternity. I have been involved in research concerning Convolution Neural Networks and Natural Language Processing, focused on extracting text and sentiment analysis on news sources. My Senior Design (Capstone) project involved using Neural Networks to detect cell tower spoofing and Man-In-The-Middle attacks using only signal attributes from a user's phone. Currently, I am working on multiple small independent projects implementing Deep Learning.</p>
-    <p>My work experience includes interning at the premier web design firm Finalsite, where I worked in User Support roles and as a Web Designer. My job had me managing and programming for multiple clients at once with diverse projects ranging from app design to custom web templates. Currently I am working on campus as a Hardware and Software Technician as I finish my graduate degree.</p>
-    <p>From an early age I've been interested in computers and bleeding edge tech. I'm constantly working on and looking for new technologies to improve people's lives. I am a very adaptable, self-motivated learner who wants to use my skill set to help people. I am expecting to finish my Master's of Science in Computer Engineering at Stevens by December 2018.</p>
+    <!--<hr class="w3-opacity">-->
     <h3 class="w3-padding-16" style="padding-bottom: 0 !important;">Skills</h3>
     <h4>To see samples of my code visit my <a href="https://github.com/jserowik" target="_blank" id="git">Github</a>.</h4>
     <p class="w3-wide">Programming</p>
@@ -202,8 +212,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div>
     <p class="w3-wide">Interests</p>
     <div class="trait_wrap">
-        <div class="traits w3-col s2 xs ts">Artificial Intelligence</div>
-        <div class="traits w3-col s2 xs ts">Advanced Compution</div>
+        <div class="traits w3-col s2 xs ts">General Artificial Intelligence</div>
+        <div class="traits w3-col s2 xs ts">Machine Learning Applications for Industry Sized Problems</div>
         <div class="traits w3-col s2">Cybersecurity</div>
         <div class="traits w3-col s2 xs">Astronomy</div>
         <div class="traits w3-col s2 xs ts">Nature Conservation</div>
@@ -218,7 +228,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         <div class="traits w3-col s2">Travel</div>
         <div class="traits w3-col s2 xs">Photography</div>
         <div class="traits w3-col s2">Film</div>
-        <div class="traits w3-col s2 xs ts">The Lodge Fraternity</div>
     </div>
     <br>
     <a class="w3-btn w3-light-grey w3-padding-large w3-section" href="media/JSerowikOnlineResume.pdf" target="_blank">
@@ -227,9 +236,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 
     <!-- Third Parallax Image with Portfolio Text -->
-    <div class="bgimg-3 w3-display-container" id="contact">
+    <div class="bgimg-4 w3-display-container" id="contact">
       <div class="w3-display-middle">
-         <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+         <span class="w3-xxlarge w3-text-light-grey w3-wide">PHOTOGRAPHY</span>
       </div>
     </div>
 
@@ -237,13 +246,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="w3-padding-32 w3-content w3-text-grey" style="margin-bottom:64px" style="padding: 32px;">
 
     <div class="w3-section">
-      <p class="w3-large">Please feel free to reach out to me with legitimate offers concerning jobs or about my interests. Solicitations and spam will be ignored.</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Justin.Serowik@protonmail.com</p>
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Hoboken, USA</p>
+      
     </div>
     
-     <!-- Google Map -->
-    <div id="googleMap" style="width:100%;height:300px;margin:36px 0;"></div>
+   <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/5576641101aa5a8ca122a10e3cbc36de.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
    
   <!-- End Contact Section -->
   </div>  
@@ -260,31 +266,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- END PAGE CONTENT -->
 </div>
 
-<!-- Add Google Maps -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPRFO20L3nKxozef6EGXGXcZkTpMO2ukQ&callback=initMap"></script>
-
 <script>
-var myCenter = new google.maps.LatLng(40.746785, -74.025686);
-
-function initialize() {
-var mapProp = {
-  center: myCenter,
-  zoom: 12,
-  scrollwheel: false,
-  draggable: false,
-  mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-  position: myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
 
 // Open and close sidenav
 function openNav() {
