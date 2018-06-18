@@ -75,18 +75,18 @@ img{margin-bottom:-5px}a{color:inherit}
     top: 100%;
 }
 .bgimg-1 {
-    background-image: url("../images/me.jpg");
+    background-image: url("../images/me.JPG");
     min-height: 450px;
     opacity:0.92 !important;
     filter:alpha(opacity=92) !important;
     /*background-position-y: 33%;*/
 }
 .bgimg-3 {
-    background-image: url("../images/norway.JPG");
+    background-image: url("../images/norway.jpg");
     min-height: 450px;
 }
 .bgimg-4 {
-    background-image: url("../images/bergen.JPG");
+    background-image: url("../images/bergen.jpg");
     min-height: 450px;
 }
 .bgimg-t {
@@ -341,8 +341,6 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 .w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:#9e9e9e!important}
 .w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#fff!important;background-color:#585b64!important}
 .w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
-.w3-text-white,.w3-hover-text-white:hover{color:#fff!important}
-.w3-text-black,.w3-hover-text-black:hover{color:#000!important}
 .w3-text-grey,.w3-hover-text-grey:hover,.w3-text-gray,.w3-hover-text-gray:hover{color:#D9D9DB!important}
 .w3-text-light-grey,.w3-hover-text-light-grey:hover,.w3-text-light-gray,.w3-hover-text-light-gray:hover{color:#f1f1f1!important}
 .w3-text-dark-grey,.w3-hover-text-dark-grey:hover,.w3-text-dark-gray,.w3-hover-text-dark-gray:hover{color:#3a3a3a!important}
