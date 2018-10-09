@@ -3,7 +3,7 @@
 <title>Justin Serowik</title>
 <meta charset="UTF-8">
 <meta name="description" content="Personal page of Justin Joseph Serowik, an Electrical and Computer Engineering graduate student at Stevens Institute of Technology interested in Artificial Intelligence, Deep Learning, Machine Learning, and Neural Networks." />
-<meta name="keywords" content="Justin Jospeh Serowik, Artificial Intelligence, Machine, Deep, Learning, Stevens Institute, Graduate, student"
+<meta name="keywords" content="Justin Jospeh Serowik, Serowik, Artificial Intelligence, Machine, Deep, Learning, Stevens Institute, Graduate, student, Deep Learning"
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/main.css">
 <link rel="shortcut icon" href="jserowik.ico">
@@ -85,12 +85,60 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 </div>
 <div class="w3-content w3-justify w3-text-grey w3-padding-32" style="padding: 32px;">
-    <p>I am a Graduate student at Stevens Institute of Technology pursuing a Master's of Science in Computer Engineering with Graduate certificates in Deep Learning and Cybersecurity. In May of 2017, I completed my Bachelor's of Engineering in Electrical Engineering at Stevens. My graduate focuses are on practical applications and optimization of Deep Learning algorithms. My interests also include the study of Cybersecurity and its application on Machine Learning systems. </p>
-    <p>At Stevens I was the President of the Stevens Branch of IEEE, the formal Philanthropy Chair, and the current Alumni Chair of the Lodge (Chi Psi) Fraternity. I have been involved in research concerning Convolution Neural Networks and Natural Language Processing, focused on extracting text and sentiment analysis on news sources. My Senior Design (Capstone) project involved using Neural Networks to detect cell tower spoofing and Man-In-The-Middle attacks using only signal attributes from a user's phone. Currently, I am working on multiple small independent projects implementing Deep Learning.</p>
-    <p>My work experience includes interning at the premier web design firm Finalsite, where I worked in User Support roles and as a Web Designer. My job had me managing and programming for multiple clients at once with diverse projects ranging from app design to custom web templates. Currently I am working on campus as a Hardware and Software Technician as I finish my graduate degree.</p>
-    <p>From an early age I've been interested in computers and bleeding edge tech. I'm constantly working on and looking for new technologies to improve people's lives. I am a very adaptable, self-motivated learner who wants to use my skill set to help people. I am expecting to finish my Master's of Science in Computer Engineering at Stevens by December 2018.</p>
+    <p>I am a Deep Learning Researcher and Data Scientist interested in impactful R&D for complex problems in Deep Learning. Currently a Graduate student at Stevens Institute of Technology finishing a M.S. in Computer Engineering with Graduate Certificates in Artificial Intelligence in Engineering Design and Cybersecurity. I'm also a part-time engineer at MITRE performing research in new domains along with my independent research projects.</p>
+    <p>From an early age I fell in love with computers and have been building, tinkering, and programming them since then. A crippling injury to a close family member in my early adolescence inspired me to persue robotics and their applications for prosthesis. I found Stevens which let me persue my interests which lead me to focus more on the intelligence side of robotics before uncovering Machine Learning at their (former) High-Performance Computing center. This evolved into research seminars on the burgeoning field of Deep Learning where I discovered a true passion for it. </p>
+    <p>I held the leadership position of the President of the Stevens Branch of IEEE where I conducted many informative hands-on workshops including some on Deep Learning. I've also been involved in research concerning Neural Networks and Natural Language Processing, focused on extracting text and sentiment analysis on news sources. My Senior Design (Capstone) project involved using Neural Networks to detect cell tower spoofing and Man-In-The-Middle attacks using only signal attributes from a user's phone. Currently, I am currently working on a Master's Thesis concerning the implemntation of Capsule Neural Networks in a Generative Adversarial Network (GAN) architecture for Semi-Supervised learning.</p>
+  	<p>For more information about my research and projects check out the rest of the page. I am a very adaptable, self-motivated learner who wants to use my skill set to help people. I am also an avid traveler and an amateur photographer. I'm finishing my Master's of Science in Computer Engineering at Stevens in December 2018 and am looking for a position in Deep Learning Research starting February 2019. Feel free to reach out to me through <a href="https://www.linkedin.com/in/jserowik" target="_blank" class="linkedin">LinkedIn</a>.</p>
 </div>
-<!-- Neural Network Security -->
+	<!-- Generative Capsule Neural Networks -->
+    <div id="dcngan" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom info_b"kk>
+        <div class="w3-container info_h">
+          <span onclick="document.getElementById('dcngan').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+          <h1>Generative Capsule Neural Networks</h1>
+        </div>
+        <div class="w3-container info_t">
+          <h5 style="margin-top:0px;">Creating a Semi-Supervised Capsule Neural Network image Generator</h5>
+          <p>My ongoing Masters' thesis where I am studying the viability of creating a Semi-Supervised Capsule Neural Network (CapsNet) image generator. Generating from the output of a CapsNet was proposed in the original paper <a href="https://arxiv.org/abs/1710.09829" target="_blank">'Dynamic Routing Between Capsules'</a> In order to accomplish this a CapsNet was trained for classification and the output of a single class in the DigitCaps layer was input into a simple Dense Decoder and trained to generate an image from this output. This method is not Semi-Supervised which is why a Generative Adversarial Network (GAN) architecture may be able to accomplish Semi-Supervised Learning. CapsNEt will be used both as the generator and critic/discriminator positions of this GAN model. Check out the Github Repo for an active look into how it works and sample images.</p>
+          <p><b>Current Status: </b> Initial tests have confirmed that a CapsNet can be used as a generator for the MNIST handwritten digits data set with another CapsNet used as a discriminator. There is still some improvements that can be made to help stabalize training, but other testing has shown that a slightly modified CapsNet generator can also generate images from the CIFAR-10 data set if trained properly. </p>
+          <a href="https://github.com/JSerowik/Masters_Thesis" target="_blank">Project Repository</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Memetic Detection -->
+    <div id="meme" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom info_b"kk>
+        <div class="w3-container info_h">
+          <span onclick="document.getElementById('meme').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+          <h1>Live Memetic Detection</h1>
+        </div>
+        <div class="w3-container info_t">
+          <h5 style="margin-top:0px;">Classifying images live on Social Media feeds</h5>
+          <p> I trained a R-CNN with Tensorflow Object Detection API capable of detecting images of “memes”, or viral photos with a specific message or parody, on a live screen capture of a social media feed. I was able to distinguish memetic images from normal images that contained similar characteristics, such as advertisements. I wrote scripts to scrape and collect images used for training from image search engines and used Python and Bash to streamline labeling and the data sanitation process.</p>
+          <p><b>Current Status: </b> Project was successful and our live demo was able to robustly distiguish between the Geico gecko, Kermit the Frog, and pictures of Pepe the Frog on different live feeds. The Github repository below contains a proof of concept CNN for distinguishing between pictures of the "Doge" meme and regular user taken photos of dogs.  </p>
+          <a href="https://github.com/JSerowik/CPE646_Project" target="_blank">Project Repository</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Generative Capsule Neural Networks -->
+    <div id="icebg" class="w3-modal">
+      <div class="w3-modal-content w3-animate-zoom info_b"kk>
+        <div class="w3-container info_h">
+          <span onclick="document.getElementById('icebg').style.display='none'" class="w3-closebtn w3-xxlarge w3-hover-text-grey">x</span>
+          <h1>Iceberg and Ship Detection Class Project</h1>
+        </div>
+        <div class="w3-container info_t">
+          <h5 style="margin-top:0px;">Classifying ships and icebergs from space</h5>
+          <p>Final class project focused on distinguishing between ships and icebergs on geo-spatial data labeled by human experts taken at different angles from satellites. I created a CNN based on the VGG architecture to correctly classify between the two on a large validation data set with a high validation accuracy. This dataset was originally part of a $50,000 Kaggle challenge and the results of the class project would have been competetive.</p>
+          <p><b>Current Status: </b> Completed the project which can be found in the Github repository link below. The data can be found on Kaggle <a href="https://www.kaggle.com/c/statoil-iceberg-classifier-challenge/data" target="_blank">here</a>.</p>
+          <a href="https://github.com/JSerowik/EE628_FinalProject" target="_blank">Project Repository</a>
+        </div>
+      </div>
+    </div>
+
+	<!-- Neural Network Security -->
     <div id="nns" class="w3-modal">
       <div class="w3-modal-content w3-animate-zoom info_b"kk>
         <div class="w3-container info_h">
@@ -134,6 +182,24 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="w3-row-padding" style="margin:0 -16px">
     <!--onclick="document.getElementById('nns').style.display='block'"-->
+        <a style="background: url('images/ps4.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('dcngan').style.display='block'">
+          <div class="main-out">
+            <h2>Generative Capsule Neural Networks</h2>
+            <p>Creating a GAN using only CapsNets</p>
+          </div>
+        </a>
+        <a style="background: url('images/doge.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('meme').style.display='block'">
+          <div class="main-out">
+            <h2>Live Memetic Detection</h2>
+            <p>Classifying images live on Social Media feeds</p>
+          </div>
+        </a>
+        <a style="background: url('images/iceb.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('icebg').style.display='block'">
+          <div class="main-out">
+            <h2>Iceberg and Ship Detection Class Project</h2>
+            <p>Classifying ships and icebergs from space</p>
+          </div>
+        </a>
         <a style="background: url('images/test.png');  background-position: 0% 0%;" class="projects w3-hover-light-grey" onclick="document.getElementById('nns').style.display='block'">
           <div class="main-out">
             <h2>Neural Network Security</h2>
@@ -180,6 +246,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p class="w3-wide">APIs</p>
     <div class="trait_wrap">
         <div class="traits w3-col sk">Keras</div>
+        <div class="traits w3-col sk">Tensorflow</div>
         <div class="traits w3-col sk">Theano</div>
         <div class="traits w3-col sk">NLTK</div>
         <div class="traits w3-col sk">Jupyter</div>
@@ -226,6 +293,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="trait_wrap">
         <div class="traits w3-col sk">General Artificial Intelligence</div>
         <div class="traits w3-col sk">Machine Learning Applications for Industry Sized Problems</div>
+        <div class="traits w3-col sk">Biological and Developmental Psychology</div>
         <div class="traits w3-col sk">Cybersecurity</div>
         <div class="traits w3-col sk">Astronomy</div>
         <div class="traits w3-col sk">Nature Conservation</div>
@@ -258,6 +326,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <div id="masonryGrid">
 	  <div class="grid">
+	  	<div class="grid-item"><img src="feed/coit.jpg"/></div>
+	    <div class="grid-item"><img src="feed/sf_vert.JPG"/></div>
 	  	<div class="grid-item"><img src="feed/rck2.jpg"/></div>
 	    <div class="grid-item"><img src="feed/seas.JPG"/></div>
 	    <div class="grid-item"><img src="feed/bcab.jpg"/></div>
@@ -311,8 +381,10 @@ function closeNav() {
     document.getElementById("mySidenav").style.display = "none";
 }
 var modal1 = document.getElementById('nns');
-var modal2 = document.getElementById('secdb');
-var modal3 = document.getElementById('textmin');
+var modal2 = document.getElementById('dcngan');
+var modal3 = document.getElementById('meme');
+var modal4 = document.getElementById('icebg');
+var modal5 = document.getElementById('textmin');
 window.onclick = function(event) {
   if (event.target == modal1) {
     modal1.style.display = "none";
@@ -322,6 +394,12 @@ window.onclick = function(event) {
   }
   if (event.target == modal3) {
     modal3.style.display = "none";
+  }
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+  if (event.target == modal5) {
+    modal5.style.display = "none";
   }
 };
 /*var win = window, body = document.body, html = document.documentElement;

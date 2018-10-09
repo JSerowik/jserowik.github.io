@@ -37,11 +37,13 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 img{margin-bottom:-5px}a{color:inherit}
 
 /*Custom*/
+.linkedin:hover{color:#0077B5;}
+.fa-linkedin:hover{color:#0077B5;}
 .top-main{padding: 0px !important;}
 .nav-filter{/*opacity:0.94;filter:alpha(opacity=94);-webkit-backface-visibility:hidden;*/}
 .main-out{color: #ffffff !important; text-shadow:1px 1px 2px #757575;}
 .projects{min-height: 300px; width:100%; display:inline-block; padding: 20px 30px; margin: 10px 0;}
-.projects:hover{opacity:0.88;filter:alpha(opacity=88);-webkit-backface-visibility:hidden; cursor: pointer; }
+.projects:hover{opacity:0.60;filter:alpha(opacity=88);-webkit-backface-visibility:hidden; cursor: pointer; }
 #logo-scroll{  }
 .bgimg {
     background-position: center;
@@ -199,7 +201,7 @@ input[type=checkbox].w3-check:disabled+.w3-validate,input[type=radio].w3-radio:d
 {content:"";display:table;clear:both}
 .w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:100%}
 .w3-col.sk{width: auto; padding: 5px 10px;}
-.
+.w3-col.sk:hover{background: #41444D;}
 @media only screen and (min-width:601px){
 }
 @media only screen and (min-width:993px){
